@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1671612255044' stop='1671612261416'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1671617676499' stop='1671617682739'>
     <name>Navigate throw Redsauce SL page: As a user, I can change between spanish/english version of the blog language</name>
     <title>Navigate throw Redsauce SL page: As a user, I can change between spanish/english version of the blog language</title>
     <test-cases>
-        <test-case start='1671612255045' status='passed' stop='1671612255049'>
+        <test-case start='1671617676500' status='passed' stop='1671617676503'>
             <name></name>
             <title></title>
             <labels>
@@ -17,7 +17,7 @@
             <steps/>
             <attachments/>
         </test-case>
-        <test-case start='1671612255049' status='passed' stop='1671612256201'>
+        <test-case start='1671617676503' status='passed' stop='1671617677607'>
             <name>Given I am on the Redsauce SL blog</name>
             <title>Given I am on the Redsauce SL blog</title>
             <labels>
@@ -31,7 +31,7 @@
             <steps/>
             <attachments/>
         </test-case>
-        <test-case start='1671612256202' status='passed' stop='1671612261413'>
+        <test-case start='1671617677607' status='passed' stop='1671617682736'>
             <name>When I click on the other language</name>
             <title>When I click on the other language</title>
             <labels>
@@ -45,7 +45,7 @@
             <steps/>
             <attachments/>
         </test-case>
-        <test-case start='1671612261413' status='passed' stop='1671612261414'>
+        <test-case start='1671617682736' status='passed' stop='1671617682738'>
             <name>Then I should see the blog in english</name>
             <title>Then I should see the blog in english</title>
             <labels>
@@ -59,7 +59,7 @@
             <steps/>
             <attachments/>
         </test-case>
-        <test-case start='1671612261414' status='passed' stop='1671612261415'>
+        <test-case start='1671617682738' status='passed' stop='1671617682739'>
             <name></name>
             <title></title>
             <labels>
