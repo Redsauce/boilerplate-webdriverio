@@ -1,4 +1,5 @@
 import type { Options } from '@wdio/types'
+import * as urls from "./test/components/componentHelper/urls.json" assert {type: 'json'};
 import * as dotenv from 'dotenv'
 dotenv.config()
 import * as fs from 'fs'
@@ -143,7 +144,7 @@ export const config: Options.Testrunner = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: process.env.ENGLISH_URL,
+    baseUrl: urls.english_url,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -161,7 +162,7 @@ export const config: Options.Testrunner = {
     // commands. Instead, they hook themselves up into the test process.
     user: process.env.TB_KEY,
     key: process.env.TB_SECRET,
-    services: ['testingbot'/*,'chromedriver','geckodriver'*//*,'safaridriver'*/],
+    services: [/*'testingbot'*/'chromedriver'/*,'chromedriver','geckodriver'*//*,'safaridriver'*/],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -191,7 +192,7 @@ export const config: Options.Testrunner = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./test/step-definitions/steps.ts'],
+        require: ['./test/step-definitions/*.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -211,7 +212,7 @@ export const config: Options.Testrunner = {
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
-        ignoreUndefinedDefinitions: false
+        ignoreUndefinedDefinitions: true
     },
     
     //

@@ -9,6 +9,7 @@
     "@wdio/allure-reporter": "^8.0.13",
     "@wdio/cli": "^8.0.13",
     "@wdio/cucumber-framework": "^8.0.13",
+    "@wdio/dot-reporter": "^8.0.13",
     "@wdio/local-runner": "^8.0.13",
     "@wdio/spec-reporter": "^8.0.13",
     "@wdio/testingbot-service": "^8.0.11",
@@ -31,8 +32,9 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
+    "testingbot": "wdio run ./wdio.testingbot.conf.ts",
     "lint": "eslint .",
-    "test": "node launcher/launcher.js"
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
     "allure-commandline": "^2.20.1",
