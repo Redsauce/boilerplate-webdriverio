@@ -1,17 +1,24 @@
 {
     "env": {
-        "node": true,
         "browser": true,
-        "commonjs": true,
-        "es2021": true
+        "es2021": true,
+        "node": true,
+        "commonjs":true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:wdio/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
     },
     "plugins": [
         "wdio"
     ],
-    "extends": [
-        "eslint:recommended",
-        "plugin:wdio/recommended"
-    ],
+    "ignorePatterns": ["/allure-report/", "/allure-result/", "wdio.conf.ts"],
     /* rules: https://eslint.org/docs/rules */
     "rules": {
         "indent": [
@@ -46,6 +53,8 @@
         "comma-dangle": ["error", "always-multiline"],
         "curly": "error",
         "max-statements-per-line": ["error", { "max": 1 }],
-        "max-len": ["error", { "code": 80 }]
+        "max-len": ["error", { "code": 80 }],
+        "@typescript-eslint/no-var-requires": 0
+
     }
 }
