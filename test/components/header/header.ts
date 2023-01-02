@@ -1,6 +1,6 @@
 import * as selectors from "./selectors";
 import * as urls from "../components/componentHelper/urls";
-//const urls = require("../components/componentHelper/urls.json");
+//const urls = require("../components/componentHelper/urls");
 
 async function changeToSpanish () {
     await browser.url("./");
