@@ -1,5 +1,6 @@
-import * as selectors from "./selectors.ts";
-import * as urls from "../componentHelper/urls.json" assert {type: 'json'};
+import * as selectors from "./selectors";
+import * as urls from "../components/componentHelper/urls";
+//const urls = require("../components/componentHelper/urls.json");
 
 async function changeToSpanish () {
     await browser.url("./");

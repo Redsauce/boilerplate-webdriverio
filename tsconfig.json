@@ -1,14 +1,12 @@
 {
-    "compilerOptions": {
-        "moduleResolution": "node",
-        "module": "ESNext",
-        "types": [
-            "node",
-            "@wdio/globals/types",
-            "expect-webdriverio",
-            "@wdio/cucumber-framework"
-        ],
-        "target": "es2022",
-        "resolveJsonModule": true,
-    }
+  "compilerOptions": {
+      "moduleResolution": "node",
+      "types": [
+          "node",
+          "@wdio/globals/types",
+          "expect-webdriverio",
+          "@wdio/cucumber-framework"
+      ],
+      "target": "es2022"
+  }
 }

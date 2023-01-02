@@ -1,6 +1,9 @@
 import type { Options } from '@wdio/types'
-import * as urls from "./test/components/componentHelper/urls.json" assert {type: 'json'};
+const urls = require("./test/components/componentHelper/urls.json");
+//import * as urls from "./test/components/componentHelper/urls.json";
+
 import * as dotenv from 'dotenv'
+import * as path from "path";
 dotenv.config()
 import * as fs from 'fs'
 
@@ -274,7 +277,12 @@ export const config: Options.Testrunner = {
                 await this.click();
             }, true);
 
-            fs.rmSync("./allure-results", { recursive: true, force: true });
+            //fs.rmSync("./allure-results", { recursive: true, force: true });
+            fs.readdir("./allure-results", (err, files) => {
+                for (const file of files) {
+                    fs.unlink(path.join("./allure-results", file), (err) => {});
+                }
+            });
         },
     /**
      * Runs before a WebdriverIO command gets executed.
