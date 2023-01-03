@@ -1,7 +1,5 @@
 import type { Options } from '@wdio/types'
 const urls = require("./test/components/componentHelper/urls.json");
-//import * as urls from "./test/components/componentHelper/urls.json";
-
 import * as dotenv from 'dotenv'
 import * as path from "path";
 dotenv.config()
