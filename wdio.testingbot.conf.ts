@@ -5,7 +5,6 @@ exports.config = {
 	],
 
 	capabilities: [
-
 		{
 			"appium:name": "iPhone 13", 
 			"appium:deviceName": "Galaxy S21", 
@@ -36,23 +35,15 @@ exports.config = {
 	},
 
 	cucumberOpts: {
-		// <string[]> (file/dir) require files before executing features
 		require: ["./test/step-definitions/steps.ts"],
-		// <boolean> show full backtrace for errors
 		backtrace: false,
 		requireModule: [],
-		// <boolean> invoke formatters without executing steps
 		dryRun: false,
-		// <boolean> abort the run on first failure
 		failFast: false,
-		// <boolean> hide step definition snippets for pending steps
 		snippets: true,
-		// <boolean> hide source uris
 		source: true,
-		// <boolean> fail if there are any undefined or pending steps
 		strict: false,
 		tagExpression: "",
-		// <number> timeout for step definitions
 		timeout: 60000,
 		ignoreUndefinedDefinitions: true,
 	},
