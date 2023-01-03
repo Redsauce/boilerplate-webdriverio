@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Install all depencies for CI
+        run: npm install
+      - name: lint run
+        run: npm run lint
+
+  e2e-tests:
+    runs-on: ubuntu-latest
+    environment: Test
+    env:
+      ENGLISH_URL: ${{ secrets.ENGLISH_URL }}
+      SPANISH_URL: ${{ secrets.SPANISH_URL }}
+      TB_SECRET: ${{ secrets.TB_SECRET }}
+      TB_KEY: ${{ secrets.TB_KEY }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Install all depencies for CI
+        run: npm install
+      - name: Run tests
+        run: npm run wdio
