@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     #runs-on: xavibarrera22/wdio-image:latest
     steps:
+      - uses: actions/checkout@v3
+      #- uses: actions/setup-node@v3
       - name: Install all depencies for CI
         run: npm install
       - name: lint run
@@ -24,6 +26,8 @@ jobs:
       TB_SECRET: ${{ secrets.TB_SECRET }}
       TB_KEY: ${{ secrets.TB_KEY }}
     steps:
+      - uses: actions/checkout@v3
+      #- uses: actions/setup-node@v3
       - name: Install all depencies for CI
         run: npm install
       - name: Run tests
