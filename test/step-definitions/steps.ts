@@ -2,8 +2,6 @@ import { Given, When, Then } from "@wdio/cucumber-framework";
 import * as selectors from "../components/header/selectors";
 import * as urls from "../components/componentHelper/urls";
 
-//const urls = require("../components/componentHelper/urls.json");
-
 Given(/^I am on the Redsauce SL blog$/, async () => {
 	await browser.url("./");
 	await expect(browser).toHaveUrl(urls.english_url);
