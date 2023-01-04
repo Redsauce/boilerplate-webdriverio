@@ -18,7 +18,7 @@
     "plugins": [
         "wdio"
     ],
-    "ignorePatterns": ["/allure-report/", "/allure-result/", "wdio.conf.ts"],
+    "ignorePatterns": ["/allure-report/", "/allure-result/", "wdio.conf.ts", "wdio.testingbot.conf.ts", "wdio.local.conf.ts"],
     /* rules: https://eslint.org/docs/rules */
     "rules": {
         "indent": [

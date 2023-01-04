@@ -32,7 +32,7 @@
     "wdio-safaridriver-service": "^2.0.0"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts",
+    "wdio": "wdio run ./wdio.local.conf.ts",
     "testingbot": "wdio run ./wdio.testingbot.conf.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."

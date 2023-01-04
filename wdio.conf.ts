@@ -62,58 +62,6 @@ export const config: Options.Testrunner = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [
-        /*
-        {
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'chrome',
-        acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-        ,
-        */
-        {
-            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-            // grid with only 5 firefox instances available you can make sure that not more than
-            // 5 instances get started at a time.
-            maxInstances: 5,
-            //
-            browserName: 'firefox',
-            acceptInsecureCerts: true,
-            'moz:firefoxOptions': {
-                args: ['-headless']
-            }
-            // If outputDir is provided WebdriverIO can capture driver session logs
-            // it is possible to configure which logTypes to include/exclude.
-            // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-            // excludeDriverLogs: ['bugreport', 'server'],
-        },
-        /*
-        {
-    
-            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-            // grid with only 5 firefox instances available you can make sure that not more than
-            // 5 instances get started at a time.
-            maxInstances: 5,
-            //
-            browserName: 'microsoftedge',
-            acceptInsecureCerts: true,
-            'ms:edgeOptions': {
-                args: ['-headless']
-            }
-            // If outputDir is provided WebdriverIO can capture driver session logs
-            // it is possible to configure which logTypes to include/exclude.
-            // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-            // excludeDriverLogs: ['bugreport', 'server'],
-        }
-        }*/
-    ],
     //
     // ===================
     // Test Configurations
@@ -160,11 +108,7 @@ export const config: Options.Testrunner = {
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
-    // commands. Instead, they hook themselves up into the test process.
-    user: process.env.TB_KEY,
-    key: process.env.TB_SECRET,
-    services: [/*'testingbot'*/'chromedriver'/*,'chromedriver','geckodriver'*//*,'safaridriver'*/],
-    
+    // commands. Instead, they hook themselves up into the test process.    
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -275,7 +219,6 @@ export const config: Options.Testrunner = {
                 await this.click();
             }, true);
 
-            //fs.rmSync("./allure-results", { recursive: true, force: true });
             fs.readdir("./allure-results", (err, files) => {
                 for (const file of files) {
                     fs.unlink(path.join("./allure-results", file), (err) => {});
