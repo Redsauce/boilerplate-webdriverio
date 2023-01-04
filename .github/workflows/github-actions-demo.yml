@@ -18,8 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: Test
     env:
-      ENGLISH_URL: ${{ secrets.ENGLISH_URL }}
-      SPANISH_URL: ${{ secrets.SPANISH_URL }}
       TB_SECRET: ${{ secrets.TB_SECRET }}
       TB_KEY: ${{ secrets.TB_KEY }}
     steps:
