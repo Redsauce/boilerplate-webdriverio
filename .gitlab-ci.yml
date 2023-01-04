@@ -1,0 +1,25 @@
+image: xavibarrera22/wdio-image:latest
+
+stages:
+  - lint
+  - test
+  
+lint:
+  stage: lint
+  cache:
+    key: npm
+    paths:
+      - node_modules
+  script:
+    - npm install
+    - npm run lint
+
+test:
+  stage: test
+  cache:
+    key: npm
+    paths:
+      - node_modules
+  script:
+    - npm install
+    - npm run wdio 
