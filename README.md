@@ -47,8 +47,6 @@ Each part of the web is divided in components, so you can detail each one withou
 
 Inside each component, you will have the file for the functions, and also a file where you will write all the selectors/or locators you need to find the elements.
 
-**Note**: When code is repeating or you think that you will use it in another function, a component usually named shared is created. There, you will follow the same file organization, but for things that you will share between other components (data, functions, etc).
-
 -  **FEATURES**:
 
 The purpose of a feature is to provide a high-level description of a software feature, and to group related scenarios.
@@ -59,8 +57,7 @@ For more information about the nomenclature and how they work, click [here](http
 
 This folder is for defining the steps of the features that you create previously. Steps are reusable; if a step is repited in two features, you only need to implement it once.
 
-  
-
+ 
 **Note**: When code is repeating or you think that you will use it in another function, a component usually named *shared* is created. There, you will follow the same file organization, but for things that you will share between other components (data, functions, etc).
 
 
